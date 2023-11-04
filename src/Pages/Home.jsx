@@ -1,5 +1,6 @@
 import AboutUs from "../Components/AboutUs";
 import Banner from "../Components/Banner";
+import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import Services from "../Components/Services";
 
@@ -17,6 +18,9 @@ const Home = () => {
       </div>
       <AboutUs></AboutUs>
       <Services></Services>
+      <div className="mt-24">
+      <Footer></Footer>
+      </div>
     </div>
   );
 };

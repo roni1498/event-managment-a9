@@ -2,7 +2,7 @@ import aboutPhoto from '../assets/AboutUs.jpg'
 
 const AboutUs = () => {
     return (
-        <div className="hero min-h-screen">
+        <div className="hero min-h-screen max-w-7xl mx-auto">
         <div className="hero-content flex-col-reverse lg:flex-row-reverse">
           <img src={aboutPhoto} className="lg:max-w-lg lg:h-[400px] max-w-sm rounded-lg shadow-2xl" />
           <div>
