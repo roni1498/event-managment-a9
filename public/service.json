@@ -3,13 +3,16 @@
       "id": 1,
       "photo": "https://i.ibb.co/d2NGmct/Wedding-Party-Planner-Sydney.jpg",
       "title": "Weddings Parties",
+      "price": 5000,
       "shortDescription": "Your Dream Wedding",
       "longDescription": "Celebrate your love in the most enchanting way possible. Our wedding planning services turn your dream wedding into a reality. From finding the perfect venue to curating every detail, we make your special day truly memorable."
+      
     },
     {
       "id": 2,
       "photo": "https://i.ibb.co/DQDW41X/341607-1600x1066-birthday-party-names-1001540940.jpg",
       "title": "Birthday Parties",
+      "price": 1200,
       "shortDescription": "Joyful Celebrations",
       "longDescription": "Every birthday deserves a unique celebration. We create unforgettable birthday experiences tailored to your personality and preferences. From themed decorations to entertainment, we make your special day truly joyful."
     },
@@ -17,6 +20,7 @@
       "id": 3,
       "photo": "https://i.ibb.co/Wzmp0WZ/211392-2121x1414-Family-Having-a-Party.jpg",
       "title": "Anniversaries",
+      "price": 2500,
       "shortDescription": "Celebrating Love",
       "longDescription": "Anniversaries are a time to celebrate love, commitment, and enduring relationships. Our anniversary events are filled with love and joy, helping you mark this significant milestone in your journey together."
     },
@@ -24,6 +28,7 @@
       "id": 4,
       "photo": "https://i.ibb.co/sHw2LSy/Getty-Images-1139705793-e1677084534601.jpg",
       "title": "Engagement Parties",
+      "price": 3000,
       "shortDescription": "Begin Your Forever",
       "longDescription": "Your engagement marks the beginning of your forever journey. We'll help you celebrate this special occasion with a splendid engagement party. Let us handle the details while you focus on the excitement of this new chapter."
     },
@@ -31,6 +36,7 @@
       "id": 5,
       "photo": "https://i.ibb.co/7JjhHvv/Getty-Images-475822012.jpg",
       "title": "Retirement Parties",
+      "price": 999,
       "shortDescription": "Retirement in Style",
       "longDescription": "Retire in style and celebrate your achievements with friends and colleagues. Our retirement parties are designed to honor your hard work and dedication. We make it a memorable send-off."
     },
@@ -38,6 +44,7 @@
       "id": 6,
       "photo": "https://i.ibb.co/g78mTxw/70-Best-Picnic-Quotes-Captions-And-Puns-720x405.webp",
       "title": "Outdoor Picnic",
+      "price": 1500,
       "shortDescription": "Fun in the Sun",
       "longDescription": "Gather outdoors for a delightful picnic. Enjoy games, great food, and the company of friends and family in a natural setting."
     }

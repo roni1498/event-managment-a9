@@ -7,11 +7,15 @@ import Login from "../Components/Login";
 import Register from "../Components/Register";
 import AboutUs from "../Components/AboutUs";
 import PrivateRoutes from "./PrivateRoutes";
+import Gallery from "../Components/gallery";
+import PageNotFound from "../Components/PageNotFound";
+import Entertainments from "../Components/Entertainments";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root></Root>,
+        errorElement: <PageNotFound></PageNotFound>,
         children: [
             {
                 path: "/",
@@ -20,6 +24,10 @@ const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login></Login>
+            },
+            {
+                path: "/gallery",
+                element: <PrivateRoutes><Gallery></Gallery></PrivateRoutes>
             },
             {
                 path: "/register",
@@ -33,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path: "/about",
                 element: <AboutUs></AboutUs>
+            },
+            {
+                path: "/entertainment",
+                element: <PrivateRoutes><Entertainments></Entertainments></PrivateRoutes>
             }
         ]
     }

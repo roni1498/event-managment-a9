@@ -1,6 +1,14 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
+
 const Enquiry = () => {
+    useEffect(() =>{
+        AOS.init()
+      },[])
   return (
-    <div className="mt-20 min-h-screen max-w-7xl mx-auto bg-yellow-50 p-14">
+    <div className="mt-20 min-h-screen max-w-7xl mx-auto bg-yellow-50 p-14" data-aos = "fade-up">
       <div className="text-center">
         <div className="">
           <h1 className="text-5xl font-bold">

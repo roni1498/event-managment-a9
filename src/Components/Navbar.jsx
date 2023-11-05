@@ -3,15 +3,19 @@ import { TbLogin2 } from "react-icons/tb";
 import logo from "../assets/logo.png";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
+import userDefaultPhoto from "../assets/user.png";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleSignOut = () => {
     logOut()
-    .then()
-    .catch()
-  }
+    .then(() =>{
+      toast.success('user Sign Out successfully')
+    })
+    .catch();
+  };
   const links = (
     <>
       <li>
@@ -25,6 +29,15 @@ const Navbar = () => {
       </li>
       <li>
         <a href="#services">Services</a>
+      </li>
+      <li>
+        <NavLink to="/entertainment">Entertainments</NavLink>
+      </li>
+      <li>
+        <NavLink to="/gallery">Gallery</NavLink>
+      </li>
+      <li>
+        <NavLink to="/venue">Venue</NavLink>
       </li>
       <li>
         <NavLink to="/register">Register</NavLink>
@@ -55,7 +68,7 @@ const Navbar = () => {
               </label>
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black"
               >
                 {links}
               </ul>
@@ -74,18 +87,45 @@ const Navbar = () => {
             <ul className="menu menu-horizontal px-1 font-semibold">{links}</ul>
           </div>
           <div className="navbar-end">
-            {user ? 
-              <button onClick={handleSignOut} className="btn rounded-xl btn-outline btn-primary">
+            {user && (
+              <div className="flex items-center">
+                <p className="mr-3">{user.displayName}</p>
+                {user.photoURL ? (
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle avatar"
+                  >
+                    <div className="w-10 rounded-full">
+                      <img src={user.photoURL} />
+                    </div>
+                  </label>
+                ) : (
+                  <label
+                    tabIndex={0}
+                    className="btn btn-ghost btn-circle avatar mr-3"
+                  >
+                    <div className="w-10 rounded-full">
+                      <img src={userDefaultPhoto} />
+                    </div>
+                  </label>
+                )}
+              </div>
+            )}
+            {user ? (
+              <button
+                onClick={handleSignOut}
+                className="btn rounded-xl btn-outline btn-primary"
+              >
                 Sign Out
               </button>
-             : 
+            ) : (
               <Link to="/login">
                 <button className="btn rounded-xl btn-outline btn-primary">
                   <TbLogin2 className="text-xl "></TbLogin2>
                   Login
                 </button>
               </Link>
-}
+            )}
           </div>
         </div>
       </div>
