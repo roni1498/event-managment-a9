@@ -1,8 +1,27 @@
 import Navbar from "./Navbar";
 import banner from "../assets/login_banner.jpg";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Register = () => {
+    const { createUser } = useContext(AuthContext)
+
+    const handleRegister = e =>{
+        e.preventDefault()
+        const form = new FormData(e.currentTarget)
+        const email = form.get('email')
+        const password = form.get('password')
+
+        // create user
+        createUser(email,password)
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => {
+            console.log(error.message)
+        })
+    }
   return (
     <div>
       <div className="bg-black opacity-70">
@@ -31,7 +50,7 @@ const Register = () => {
             <p className="mb-2 font-medium">
               Welcome! please join with us to know more.
             </p>
-            <form className="w-full flex flex-col">
+            <form onSubmit={handleRegister} className="w-full flex flex-col">
               <input
                 type="text"
                 placeholder="Name"

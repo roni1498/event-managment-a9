@@ -1,8 +1,30 @@
 import Navbar from "./Navbar";
 import banner from "../assets/login_banner.jpg";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Login = () => {
+    const { login } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+    console.log(location)
+    const handleLogin = e => {
+        e.preventDefault()
+        const form = new FormData(e.currentTarget);
+        const email = form.get('email')
+        const password =form.get('password')
+        console.log(form.get('email'))
+         
+        login(email, password)
+        .then(result => {
+            console.log(result.user)
+            navigate(location?.state ? location.state : '/')
+        })
+        .catch(error =>{
+            console.log(error)
+        })
+    }
   return (
     <div>
       <div className="bg-black opacity-70">
@@ -31,7 +53,8 @@ const Login = () => {
             <p className="mb-2 font-medium">
               Welcome back! please enter your email & password.
             </p>
-            <form className="w-full flex flex-col">
+
+            <form onSubmit={handleLogin} className="w-full flex flex-col">
              
               <input
                 type="email"
