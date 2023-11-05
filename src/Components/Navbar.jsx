@@ -1,13 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { TbLogin2 } from 'react-icons/tb';
 import logo from '../assets/logo.png'
+import user from '../assets/user.png'
 
 
 const Navbar = () => {
     const links = <>
         <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/contact">Contact</NavLink></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+        <li><a href="#services">Services</a></li>
         <li><NavLink to="/register">Register</NavLink></li>
     </>
     return (
@@ -38,10 +40,10 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <button className="btn rounded-xl btn-outline btn-primary">
+ <Link to="/login"> <button className="btn rounded-xl btn-outline btn-primary">
   <TbLogin2 className="text-xl "></TbLogin2>
   Login
-</button>
+</button></Link>
   </div>
 </div>
         </div>

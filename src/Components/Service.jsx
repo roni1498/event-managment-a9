@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Service = ({ service }) => {
-  const { photo, title, shortDescription } = service;
+  const { id, photo, title, shortDescription } = service;
   return (
     <div className="flex flex-col justify-center mx-auto ">
       <div className="group h-96 w-96 [perspective:1000px]">
@@ -17,9 +18,9 @@ const Service = ({ service }) => {
             <div className="flex min-h-full flex-col items-center justify-center">
               <h1 className="text-3xl font-bold">{title}</h1>
               <p className="text-lg">{shortDescription}</p>
-              <button className="mt-2 rounded-md bg-neutral-800 py-2 px-2 text-base hover:bg-neutral-900">
+              <Link to={`/service/${id}`}><button className="mt-2 rounded-md bg-neutral-800 py-2 px-2 text-base hover:bg-neutral-900">
                 Read More
-              </button>
+              </button></Link>
             </div>
           </div>
         </div>

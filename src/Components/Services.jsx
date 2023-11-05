@@ -12,10 +12,10 @@ const Services = () => {
     .then(data => setServices(data))
   }, [])
     return (
-        <div className="">
+        <div id="services" className="">
   <div className=" ">
     <div className="text-center">
-      <h1 className="text-5xl font-bold">What we do for you?</h1>
+      <h1 className="text-5xl font-bold">TYPE OF PARTIES & EVENTS</h1>
       <p className="py-6 text-lg">Weddings, Birthday Parties, Anniversaries,Engagement Parties, Retirement Parties, Outdoor Picnic, etc.</p>
     </div>
     <div className="grid grid-cols-1 lg:grid-cols-3 max-w-7xl mx-auto gap-6">
