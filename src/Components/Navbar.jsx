@@ -25,9 +25,6 @@ const Navbar = () => {
         <a href="#about-us">About Us</a>
       </li>
       <li>
-        <a href="#contact-us">Contact Us</a>
-      </li>
-      <li>
         <a href="#services">Services</a>
       </li>
       <li>
@@ -35,9 +32,6 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to="/gallery">Gallery</NavLink>
-      </li>
-      <li>
-        <NavLink to="/venue">Venue</NavLink>
       </li>
       <li>
         <NavLink to="/register">Register</NavLink>
@@ -89,7 +83,7 @@ const Navbar = () => {
           <div className="navbar-end">
             {user && (
               <div className="flex items-center">
-                <p className="mr-3">{user.displayName}</p>
+                <p className="">{user.displayName}</p>
                 {user.photoURL ? (
                   <label
                     tabIndex={0}

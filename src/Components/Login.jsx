@@ -18,6 +18,8 @@ const Login = () => {
        googleSignIn()
        .then(result => {
         console.log(result.user)
+        toast.success('User log in successfully');
+        navigate(location?.state ? location.state : '/');
        })
        .catch(error => {
         console.log(error.message)
